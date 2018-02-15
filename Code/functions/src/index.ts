@@ -1,13 +1,14 @@
 import * as functions from 'firebase-functions';
 import {User} from './app/user/user-ctrl';
 import * as express from 'express';
+import {Constants} from './app/constant/constant'
 
 const expressRouter =  express();
+const user=new User();
 
-console.log(new User());
+expressRouter.get("", (req, res) => {
 
-expressRouter.get("*", (req, res) => {
-  res.send(new User());
+  res.json(user.findAll());
 });
 
 // Cloud Function

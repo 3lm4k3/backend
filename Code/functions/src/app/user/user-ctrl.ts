@@ -1,11 +1,13 @@
 
 export class User {
-    constructor() {
-    console.log("Ahmed");
+    constructor(x:string="Ahmed Khamis") {
+    this.x=x;
   }
-  getUser(x:string){
-    return x;
+  private x:string;
+  findAll():Array<User>{
+    return [new User("Ahmed Khamis"),new User("Mahmoud Hassan")];
   }
+  
 }
 
  

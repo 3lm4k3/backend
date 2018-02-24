@@ -73,3 +73,4 @@ tests/cases/user/*/**/*.d.ts
 tests/baselines/reference/dt
 functions/node_modules/*
 functions/node_modules
+JavaBackend/*

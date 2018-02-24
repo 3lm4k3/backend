@@ -1,15 +1,14 @@
 import * as functions from 'firebase-functions';
-import {User} from './app/user/user-ctrl';
 import * as express from 'express';
-import {Constants} from './app/constant/constant'
+import { UserCtrl } from './app/user/user-ctrl';
 
 const expressRouter =  express();
-const user=new User();
 
-expressRouter.get("", (req, res) => {
+const  ctrl= new UserCtrl();
 
-  res.json(user.findAll());
-});
+ctrl.registerRoutes(expressRouter);
+
 
 // Cloud Function
-exports.express = functions.https.onRequest(expressRouter);
+
+exports.api = functions.https.onRequest(expressRouter);

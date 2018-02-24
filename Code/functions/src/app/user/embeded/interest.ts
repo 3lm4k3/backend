@@ -1,4 +1,4 @@
-import { Entity } from "../Entity";
+import { Entity } from "../../embeded/entity";
 
 export class Interest extends Entity{
     private _tags:Array<string>;

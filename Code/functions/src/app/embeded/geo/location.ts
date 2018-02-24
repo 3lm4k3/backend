@@ -6,6 +6,7 @@ export class Location extends Entity{
     private _country:number;
     private _latitude:number;
     private _longitude:number;
+    private _translatedLocation:string;//translation of Location in Google Maps
 
     get city(): number { return this._city }
     set city(s: number ) { this._city = s; }
@@ -18,5 +19,10 @@ export class Location extends Entity{
     
     get longitude(): number { return this._longitude }
     set longitude(s: number ) { this._longitude = s; }
+
+	get translatedLocation(): string {return this._translatedLocation;}
+    set translatedLocation(value: string) {this._translatedLocation = value;}
+		
+	
    
 }
